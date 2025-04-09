@@ -1,0 +1,61 @@
+<div class="container-fluid position-relative p-0 bg-color-trans">
+
+    <div class="categories mt-5">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg ms-5 mt-5">
+                    <div class="container text-uppercase">
+                        <!-- logo here -->
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav text-center" ng-repeat="category in categories">
+                                <li class="nav-item nav-box-item">
+                                    <a class="nav-link text-c-primary" aria-current="page" href=""
+                                        ng-click="setOrder(category.name)">
+                                        <img src="{{category.icon}}" alt="" class="w-25">
+                                        <br>
+                                        <span class="fw-bold">
+                                            {{category.name}}
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <div class="products mt-3 pb-5">
+        <div class="new-products background-item">
+            <div class="d-flex justify-content-center">
+                <h5 class="text-c-primary fw-bold fs-3 text-uppercase">Sản phẩm</h5>
+            </div>
+            <!-- row-1 -->
+            <div class="container px-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 overflow-hidden" ng-repeat="cake in cakes | filter:{category: order}">
+                        <div class="product-pointer card text-center text-uppercase border-0 mx-2 my-3 transition-03 bg-white" ng-click="getCake(cake)">
+                            <img src="{{cake.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title my-3 fw-bold">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        {{cake.name}}
+                                    </a>
+                                </h5>
+                                <span class="price text-c-primary my-3 fw-bold">{{cake.price | number}} VNĐ</span>
+                                <br>
+                                <a href="#!cart" class="btn bg-color-primary my-3 fw-bolder text-light px-4 py-3">Đặt
+                                    hàng</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

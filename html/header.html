@@ -1,0 +1,67 @@
+<div class="header-top bg-color-second text-center text-dark py-1">
+    <span style="letter-spacing:0.1em;" class="fw-medium">
+        Mon - Fri: 8AM - 8PM&nbsp;&nbsp;
+        Saturday: 9AM - 7PM&nbsp;&nbsp;
+        Sunday: 9AM - 8PM&nbsp;
+    </span>
+</div>
+<div class="header-bottom bg-color-primary" ng-controller="appCtrl">
+    <div class="container-fluid ms-5">
+        <div class="row">
+            <!-- left-side-9 -->
+            <div class="col-lg-9 col-md-8 col-12">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid text-uppercase">
+                        <!-- logo here -->
+                        <!-- <a class="navbar-brand nav-box-item" href="#"><img src="assets/img/bakery-logo.png" class="img-fluid" alt="Bakery Logo"></a> -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#!about-us">Our Story</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#!RickMenu">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#!contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- right-side-3 -->
+            <div class="col-lg-3 col-md-4 col-12">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid text-uppercase">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!cart">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!login" ng-if="!user">Log In</a>
+                                <div class="dropdown" ng-if="user">
+                                    <a class="dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{user.name}}
+                                    </a>
+                                  
+                                    <ul class="dropdown-menu bg-danger">
+                                      <li><a class="dropdown-item" ng-click="logOut()">Đăng xuất</a></li>
+                                    </ul>
+                                  </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

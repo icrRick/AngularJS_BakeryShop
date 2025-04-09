@@ -1,0 +1,63 @@
+<div class="container-fluid background-about-us mt-5 p-5">
+    <div class="container bg-color-primary mt-5 d-flex justify-content-center border-radius p-5 text-light w-50">
+        <div class="login-form mt-5 w-100">
+
+            <div class="row">
+                <div class="col-lg-6 login">
+                    <h3 class="text-center text-uppercase fw-bold">Đăng ký</h3>
+                    <form ng-submit="signUp()">
+                        <div class="mb-3">
+                            <input type="text" class="form-control p-3" placeholder="Họ tên" ng-model="newUser.name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control p-3" aria-describedby="emailHelp"
+                                placeholder="Email" ng-model="newUser.email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control p-3" placeholder="Số điện thoại"
+                                ng-model="newUser.phone">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control p-3" placeholder="Mật khẩu">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control p-3" id="exampleInputPassword2"
+                                placeholder="Xác nhận mật khẩu" ng-model="newUser.password">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select p-3" aria-label="Tỉnh/Thành phố" ng-model="newUser.address">
+                                <option selected disabled value="">Chọn tỉnh thành phố</option>
+                                <option value="Cần Thơ">Cần Thơ</option>
+                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select p-3" aria-label="Giới tính" ng-model="newUser.gender">
+                                <option selected disabled value="">Chọn giới tính</option>
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-warning px-5">
+                            Đăng ký
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+
+                        <img src="assets/img/logo_SLP.png" alt="" class="w-25 my-3">
+                        <h3 class="text-center my-3 text-uppercase">Đã có tài khoản?</h3>
+                        <div class="btn btn-warning my-3 px-5">
+                            <a href="#!login" class="text-decoration-none text-dark">Đăng nhập tại đây</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

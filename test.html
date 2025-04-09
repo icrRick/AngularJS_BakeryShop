@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick's Bakery</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.js" defer></script>
+    <!-- icon-fontawesome -->
+    <script src="https://kit.fontawesome.com/a88101e044.js" crossorigin="anonymous" defer></script>
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- my-css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom-scrollbar.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="myctrl">
+        <h1>{{cake.name}}</h1>
+        <h2>{{cake.price}}</h2>
+    </div>
+    <script>
+        let cakeName;
+        function myFunc ($scope) {
+                fetch('http://localhost:3000/Cake')
+                .then((response) => response.json())
+                .then((data) => {
+                    localStorage.setItem('myStorage', JSON.stringify(data));
+                    cakeName = JSON.parse(localStorage.getItem('myStorage'));
+                })
+        }
+        console.log(cakeName);
+        var app = angular.module("myapp", []);
+        app.controller("myctrl" , myFunc)
+    </script>
+</body>
+
+</html>

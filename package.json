@@ -1,0 +1,16 @@
+{
+  "name": "phamnguyentrongtri-pc09411-scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch cakes.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rick",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.1",
+    "phamnguyentrongtri-pc09411-scss": "file:"
+  }
+}

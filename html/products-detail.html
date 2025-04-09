@@ -1,0 +1,96 @@
+<div class="container-fluid position-relative p-0 mt-5">
+    <div class="main-content">
+        <div class="d-flex justify-content-center align-items-center background-filter p-5">
+            <h5 class="text-uppercase text-light text-center fs-1 fw-bolder">{{cake.name}}</h5>
+        </div>
+
+        <div class="products-item mt-5">
+            <div class="row justify-content-center mx-0">
+                <div class="col-lg-3 mt-3">
+                    <div class="card text-center">
+                        <img src="{{cake.url}}" alt="{{cake.name}}" class="img-fluid w-75 mx-auto my-4">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-3">
+                    <div class="card">
+                        <div class="card-header bg-color-primary text-light">
+                            <h5 class="text-uppercase m-3">{{cake.name}}</h5>
+                        </div>
+                        <div class="card-body d-flex">
+                            <div class="col-lg-6">
+                                <span class="price fw-bolder m-3 fs-4">{{cake.price | number}} VNĐ</span>
+                                <div class="card-size m-3">
+                                    <h6 class="m-3">Size</h6>
+                                    <div class="cake-sz">
+                                        <ul class="list-group list-group-horizontal">
+                                            <li class="list-group-item border-0">
+                                                <input class="form-check-input me-1" type="radio" name="size" id="small"
+                                                    checked>
+                                                <label class="form-check-label" for="small">Nhỏ/S</label>
+                                            </li>
+                                            <li class="list-group-item border-0">
+                                                <input class="form-check-input me-1" type="radio" name="size"
+                                                    id="medium">
+                                                <label class="form-check-label" for="medium">Vừa/M</label>
+                                            </li>
+                                            <li class="list-group-item border-0">
+                                                <input class="form-check-input me-1" type="radio" name="size"
+                                                    id="large">
+                                                <label class="form-check-label" for="large">Lớn/L</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-numb m-3">
+                                    <h6 class="m-3">Số lượng</h6>
+                                    <div class="input-group w-50">
+                                        <button class="btn btn-outline-secondary" type="button"
+                                            onclick="document.getElementById('quantity').stepDown()">-</button>
+                                        <input type="number" class="form-control text-center" id="quantity" value="1"
+                                            min="1">
+                                        <button class="btn btn-outline-secondary" type="button"
+                                            onclick="document.getElementById('quantity').stepUp()">+</button>
+                                    </div>
+                                </div>
+                                <div class="card-btn mt-4">
+                                    <button class="btn background-color-secondary">Thêm vào giỏ</button>
+                                    <button class="btn bg-color-primary text-light ms-3">Mua ngay</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 fs-5">
+                                Cái {{cake.name}} ngon ác.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 text-center mx-0">
+                <h5 class="text-primary fw-bold fs-3 text-uppercase">Có thể bạn thích</h5>
+            </div>
+            <div class="products mt-3 mx-0">
+                <div class="new-products background-item">
+                    <div class="d-flex justify-content-center">
+                        <h5 class="text-c-primary fw-bold fs-3 text-uppercase">Sản phẩm cùng loại</h5>
+                    </div>
+                    <!-- row-1 -->
+                    <div class="row justify-content-center mx-0">
+                        <div class="col-lg-2 custom-col" ng-repeat="cakeSame in cakes | filter:{category: cake.category}">
+                            <div class="product-pointer card text-center text-uppercase border-0 mx-3 my-3 transition-03" ng-click="getCake(cakeSame)">
+                                <img src="{{cakeSame.url}}" class="card-img-top" alt="Burger tôm">
+                                <div class="card-body">
+                                    <h5 class="card-title mt-3 fw-bold">{{cakeSame.name}}</h5>
+                                    <span class="price text-c-primary my-3 fw-bold">{{cakeSame.price | number}} VNĐ</span>
+                                    <br>
+                                    <a href="#" class="btn bg-color-primary my-3 fw-bolder text-light px-4 py-3">Đặt
+                                        hàng</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

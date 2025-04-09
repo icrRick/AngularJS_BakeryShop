@@ -1,0 +1,106 @@
+<section class="main-content me-3">
+    <div class="header-slide">
+        <div class="row mt-5 mb-0">
+            <div class="logo col-lg-4 d-flex flex-column justify-content-center align-items-center bg-white">
+                <div class="text-uppercase oswald-font text-center">
+                    <h1 class="text-c-primary oswald-font fs-4rem fw-bold">Rick's bakery</h1>
+                </div>
+                <a href="#!RickMenu" class="text-decoration-none btn btn-outline-danger mt-3">
+                    Xem Menu
+                </a>
+            </div>
+            <!-- carousel -->
+            <div class="slide col-lg-8 p-0">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/img/bakery-slide-3.png" class="d-block w-100" alt="Bakery Slide 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/img/bakery-slide-2.png" class="d-block w-100" alt="Bakery Slide 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end-headerSlide -->
+    <!-- recommend-products -->
+    <section class="recommend-products mb-0">
+        <div class="row mb-0">
+            <div class="col-lg-4 p-0">
+                <div class="card border-0 bg-color-primary text-light text-center rounded-none box-products-item">
+                    <div class="my-3">
+                        <img src="/assets/img/logo_SLP.png" alt="Logo" class="w-25">
+                    </div>
+                    <h3 class="text-uppercase my-3 fs-1 fw-bold">Ăn gì<br>hôm nay</h3>
+                    <p class="mx-7 my-3">Thực đơn Rick's Bakery tuyển chọn</p>
+                    <a href="#!RickMenu" class="text-decoration-none btn btn-warning my-3">Gọi món ngay</a>
+                </div>
+            </div>
+
+            <div class="col-lg-8 p-0 d-flex flex-wrap">
+                <div class="col-md-4 col-12 p-0 overflow-hidden " ng-repeat="cake in cakes | filter: {hot:true} | limitTo:3">
+                    <div class="box-products-item bg-color-primary transition-03 card text-center border-0 text-uppercase rounded-none" ng-click="getCake(cake)">
+                        <div class="overflow-hidden">
+                            <img src="{{cake.url}}" alt="{{cake.name}}" class="img-full">
+                        </div>
+                        <div class="animation bg-color-primary p-3 rounded-top">
+                            <h5 class="text-light fw-bold">{{cake.name}}</h5>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- new-products -->
+    <section class="new-products">
+        <h2 class="oswald-font fs-2 my-5 text-center">New Products</h2>
+        <div class="row mx-3">
+            <div class="col-lg-3 col-md-6 mb-4" ng-repeat="cake in cakes | limitTo: 4">
+                <div class="product-item card none-rounded p-0 border-0" ng-click="getCake(cake)">
+                    <img src="{{cake.url}}" class="img-fluid" alt="{{cake.name}}">
+                    <div class="card-body text-center p-2">
+                        <h5 class="card-title fs-6">{{cake.name}}</h5>
+                        <p class="card-text fs-6">
+                            <span class="price">{{cake.price | number}} VNĐ</span>
+                        </p>
+                        <a href="#!cart" class="btn btn-danger">Đặt hàng ngay</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- about-us -->
+    <section class="about-us background-about-us mt-5 p-5">
+        <div class="p-0 m-5 text-light">
+            <div class="d-flex flex-column justify-content-center background-filter rounded-pill p-5 mt-6">
+                <h3 class="text-uppercase oswald-font fs-3 mb-4 text-center">
+                    <span class="text-color-primary">Rick's</span>
+                    Bakery
+                </h3>
+                <hr class="mx-auto w-25">
+                <p class="fw-medium text-center">THỊ TRẤN CỦA THI VỊ & NGỌT NGÀO</p>
+                <p class="text-justify text-center mx-5">
+                    Trong cuộc sống hiện đại chúng tôi thấu hiểu rằng một sản phẩm thực phẩm được bạn mong chờ nhiều hơn
+                    một trải nghiệm vị giác đơn thuần. Giữa vô vàn mùi vị chúng tôi đã chọn vị Ngọt để đặt nền móng cho
+                    những thấu hiểu đó và tạo nên Rick's Bakery với mong muốn mang đến cảm...
+                </p>
+                <a href="#!about-us" class="text-decoration-none btn btn-outline-danger mt-3 align-self-center">Read More</a>
+            </div>
+        </div>
+    </section>
+</section>
