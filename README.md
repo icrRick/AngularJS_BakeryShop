@@ -6,6 +6,11 @@ Một website bán bánh ngọt đơn giản, xây dựng bằng **AngularJS** v
 
 👉 [https://angular-js-bakery-shop.vercel.app](https://angular-js-bakery-shop.vercel.app)
 
+### 🔑 Tài khoản mẫu để đăng nhập
+
+  - Username: `pickleRick@gmail.com`
+  - Password: `rick123`
+
 ---
 
 ## 📂 Cấu trúc thư mục
