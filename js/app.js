@@ -1,5 +1,5 @@
 var app = angular.module("myApp", ["ngRoute"]);
-let API = "http://localhost:3000/";
+let API = "/";
 
 app.factory("UserService", function () {
     return {
